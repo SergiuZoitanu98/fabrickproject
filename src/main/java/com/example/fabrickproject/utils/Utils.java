@@ -1,4 +1,4 @@
-package utils;
+package com.example.fabrickproject.utils;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -13,14 +13,13 @@ public class Utils {
     private final HttpClient httpClient = HttpClient.newBuilder()
             .version(HttpClient.Version.HTTP_2)
             .build();
-    public String getBalance(String id) throws Exception {
+    public String getBalance() throws Exception {
         // open a connection, the request method is "GET" by default
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
-                .uri(URI.create("https://sandbox.platfr.io/api/gbs/banking/v4.0/accounts/"+"accountId="+id+"balance"))
+                .uri(URI.create("https://sandbox.platfr.io/api/gbs/banking/v4.0/accounts/14537780/balance"))
                 .setHeader("Auth-Schema", "S2S")
                 .setHeader("Api-Key","FXOVVXXHVCPVPBZXIJOBGUGSKHDNFRRQJP")
-
                 .build();
 
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());

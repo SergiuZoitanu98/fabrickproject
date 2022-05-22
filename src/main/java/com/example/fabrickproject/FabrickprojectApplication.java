@@ -1,6 +1,6 @@
 package com.example.fabrickproject;
 
-import controllers.MainController;
+import com.example.fabrickproject.controllers.MainController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;

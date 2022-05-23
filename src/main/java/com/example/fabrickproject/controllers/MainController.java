@@ -23,8 +23,8 @@ public class MainController {
     public String createMoneyTransfer() throws Exception {
         return mainService.createMoneyTransfer();
     }
-    @GetMapping("/getTrans")
-    public String getTrans() throws Exception {
+    @GetMapping("/getTransactions")
+    public String getTransactions() throws Exception {
         return mainService.getTransactions();
     }
 }

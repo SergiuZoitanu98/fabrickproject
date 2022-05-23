@@ -1,11 +1,9 @@
 package com.example.fabrickproject.services;
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-
 import org.apache.http.auth.AUTH;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -15,7 +13,6 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-
 import java.io.EOFException;
 import java.io.IOException;
 import java.net.URI;
@@ -62,7 +59,6 @@ public class MainService {
                 .build();
         HttpResponse<String> response = client.send(request,
                 HttpResponse.BodyHandlers.ofString());
-        System.out.println(response.statusCode());
         String status = Integer.toString(response.statusCode());
         return response.body();
     }
